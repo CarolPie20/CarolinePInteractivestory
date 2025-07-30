@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,700|Quattrocento:700');
+
+/* Base styles (some colors updated for Alice vibe) */
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: lighter;
+    background: #B3D4FC; /* Light blue pastel sky */
+    overflow: hidden;
+    color: #3A2E5A; /* dark purple text */
+}
+
+h1, h2 {
+    text-align: center;
+    font-family: "Quattrocento", Georgia, 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 30pt;
+    margin-bottom: 10px;
+    color: #4A3F35; /* dark brown, woodsy */
+}
+
+h2 {
+    font-size: 14pt;
+    font-style: italic;
+    font-family: sans-serif;
+    font-weight: lighter;
+    color: #A48E54; /* golden yellow */
+}
+
+.header {
+    padding-top: 3em;
+    padding-bottom: 3em;
+}
+
+.byline {
+    font-style: italic;
+    color: #6A5E3C;
+}
+
+.written-in-ink {
+    z-index: 3;
+    font-size: 9pt;
+    font-family: sans-serif;
+    text-align: center;
+    font-weight: 700;
+    position: fixed;
+    display: block;
+    width: 100%;
+    background: #D1E9FF; /* pale blue */
+    margin: 0;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    height: 20px;
+    top: 0;
+    color: #4A3F35;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Container for story text */
+.container {
+    display: block;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    padding-top: 4em;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(74, 63, 53, 0.15);
+    color: #3A2E5A;
+}
+
+/* Links and choices */
+a {
+    font-weight: 700;
+    color: #B77A2C; /* warm gold */
+    font-family: sans-serif;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #4A3F35;
+}
+
+/* Controls - keep visible and clickable */
+#controls {
+    z-index: 1000; /* high to be on top */
+    font-size: 9pt;
+    text-align: center;
+    padding: 8px 12px;
+    position: fixed;
+    right: 14px;
+    top: 4px;
+    user-select: none;
+    background: #FFF8DC; /* light cream */
+    border: 1.5px solid #B77A2C; /* golden border */
+    border-radius: 8px;
+    color: #4A3F35;
+    box-shadow: 0 2px 6px rgba(183, 122, 44, 0.4);
+    pointer-events: auto;
+}
+
+#controls [disabled] {
+    color: #ccc;
+    pointer-events: none;
+}
+
+#controls > *:not(:last-child):after {
+    content: " | ";
+    color: #B77A2C;
+}
+
+@media screen and (max-width: 980px) {
+    #controls {
+        z-index: 1000;
+        padding-top: 24px;
+        top: 0;
+        left: 0;
+        right: 0;
+        border-radius: 0;
+    }
+}
+
+/* Choice styling */
+.choice a, .choice span {
+    font-size: 15pt;
+    color: #7F6A42;
+}
+
+.choice a:hover {
+    color: #4A3F35;
+}
+
+/* The End */
+.end {
+    text-align: center;
+    font-weight: bold;
+    color: #4A3F35;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+/* ===========================
+   Wonderland Dark Theme
+   Activate with body.dark
+   =========================== */
+
+body.dark {
+    background: #0B2240; /* deep midnight blue */
+    color: #E6E6FA; /* light lavender */
+}
+
+body.dark .container {
+    background: #121F3D; /* navy background */
+    box-shadow: 0 4px 10px rgba(138, 111, 173, 0.5);
+    color: #E6E6FA;
+}
+
+body.dark h1 {
+    color: #C0A0E3; /* pastel purple */
+}
+
+body.dark h2 {
+    color: #A88FD8; /* softer purple */
+}
+
+body.dark .byline {
+    color: #B9A7D8;
+}
+
+body.dark .written-in-ink {
+    background: #121F3D;
+    color: #C0A0E3;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+}
+
+body.dark a {
+    color: #C0A0E3;
+}
+
+body.dark a:hover {
+    color: #FFFFFF;
+}
+
+body.dark #controls {
+    background: #2C1F54; /* dark purple */
+    border: 1.5px solid #A88FD8;
+    color: #E6E6FA;
+    box-shadow: 0 2px 6px rgba(168, 143, 216, 0.7);
+}
+
+/* Controls disabled */
+body.dark #controls [disabled] {
+    color: #555;
+}
+
+/* Choice links in dark mode */
+body.dark .choice a, body.dark .choice span {
+    color: #BBA3E2;
+}
+
+body.dark .choice a:hover {
+    color: #FFFFFF;
+}
+
+/* The End */
+body.dark .end {
+    color: #E6E6FA;
+}
+
+
+
+
+
+
